@@ -8,7 +8,7 @@ import lombok.Setter;
 import java.util.Objects;
 
 @Getter
-public class ColorPoint extends Point{
+public class ColorPoint extends Point {
     private Color color;
 
     public ColorPoint(long x, long y, Color color) {
