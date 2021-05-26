@@ -2,13 +2,31 @@ package me.catsbi.effectivejavastudy.chapter2.item13;
 
 public class App {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Food apple = new Food("사과", 1000);
-        Food copiedApple = (Food) apple.clone();
+        Foods foods = new Foods();
+        foods.add(new Food("사과", 1000));
+        foods.add(new Food("귤", 2000));
+        foods.add(new Food("배", 3000));
 
-        System.out.println("copiedApple = " + copiedApple);
+        Foods copiedFoods = foods.clone();
+//        System.out.println("foods: "+ foods);
+//        System.out.println("copiedFoods: "+copiedFoods);
+
+        foods.get(0);
+        System.out.println("foods: "+ foods);
+
+        foods.get(1);
+        System.out.println("foods: "+ foods);
+
+        foods.get(2);
+        System.out.println("foods: "+ foods);
+
+
+        /*copiedFoods.add(new Food("딸기", 500));
+        System.out.println("foods: "+ foods);
+        System.out.println("copiedFoods: "+copiedFoods);*/
     }
 
-    static class Food {
+    /*static class Food {
         private String name;
         private long price;
 
@@ -26,5 +44,5 @@ public class App {
         protected Object clone() throws CloneNotSupportedException {
             return super.clone();
         }
-    }
+    }*/
 }
